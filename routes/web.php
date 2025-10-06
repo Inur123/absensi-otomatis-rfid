@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\JadwalController;
 use App\Http\Controllers\Admin\AbsensiController;
 use App\Http\Controllers\Admin\KategoriController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\User\DataAbsensiController;
 
 // ==== PUBLIC ==== //
 Route::get('/', function () {
@@ -29,3 +30,6 @@ Route::middleware('auth')->group(function () {
     Route::resource('jadwal', JadwalController::class);
     Route::resource('absensi', AbsensiController::class); // Tambahan baru
 });
+
+Route::get('/data-absen', [DataAbsensiController::class, 'form']);
+Route::post('/data-absen', [DataAbsensiController::class, 'absen']);
