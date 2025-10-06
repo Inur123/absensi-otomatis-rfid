@@ -65,14 +65,14 @@
 
                     <div class="flex justify-center gap-4">
                         <button @click="showLogoutModal = false"
-                            class="px-4 py-2 rounded-md bg-gray-200 text-gray-700 hover:bg-gray-300">
+                            class="px-4 py-2 rounded-md bg-gray-200 text-gray-700 hover:bg-gray-300 cursor-pointer">
                             Batal
                         </button>
 
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
                             <button type="submit"
-                                class="px-4 py-2 rounded-md bg-red-600 text-white hover:bg-red-700">
+                                class="px-4 py-2 rounded-md bg-red-600 text-white hover:bg-red-700 cursor-pointer">
                                 Logout
                             </button>
                         </form>
