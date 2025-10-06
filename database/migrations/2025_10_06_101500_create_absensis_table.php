@@ -11,12 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('absensis', function (Blueprint $table) {
+       Schema::create('absensis', function (Blueprint $table) {
             $table->id();
-            $table->string('nama');
-            $table->uuid('uuid');
-            $table->foreignId('kategori_id')->nullable()->constrained('kategoris')->onDelete('set null');
-            $table->timestamp('waktu_absen')->default(now());
+            $table->string('nama'); // nama kegiatan absen
+            $table->foreignId('jadwal_id')->constrained('jadwal_absensis')->onDelete('cascade');
+            $table->json('kategori_id')->nullable();
             $table->timestamps();
         });
     }

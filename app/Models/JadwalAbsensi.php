@@ -15,4 +15,10 @@ class JadwalAbsensi extends Model
     protected $casts = [
         'hari' => 'array',
     ];
+
+    public function absensis()
+    {
+        return $this->hasMany(Absensi::class, 'kategori_id', 'id');
+        // Jika ingin absensi sesuai kategori tertentu
+    }
 }

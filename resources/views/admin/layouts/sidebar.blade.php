@@ -35,35 +35,63 @@
 
         <!-- Tambah Data User -->
         <a href="{{ route('users.index') }}"
-    class="flex items-center text-gray-100 hover:bg-gray-700 hover:text-white rounded-lg transition-colors duration-200
+            class="flex items-center text-gray-100 hover:bg-gray-700 hover:text-white rounded-lg transition-colors duration-200
     {{ request()->routeIs('users.*') ? 'bg-gray-700' : '' }}"
-    :class="{ 'px-4 py-2': sidebarOpen, 'p-2 justify-center': !sidebarOpen }">
-    <svg class="h-6 w-6 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-        stroke="currentColor">
-        <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2" fill="none" />
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M6 20c0-2.21 3.58-4 6-4s6 1.79 6 4" />
-    </svg>
+            :class="{ 'px-4 py-2': sidebarOpen, 'p-2 justify-center': !sidebarOpen }">
+            <svg class="h-6 w-6 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2" fill="none" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M6 20c0-2.21 3.58-4 6-4s6 1.79 6 4" />
+            </svg>
 
-    <span class="ml-3 transition-opacity duration-200"
-        :class="sidebarOpen ? 'opacity-100' : 'opacity-0 pointer-events-none w-0'" x-cloak>
-        User
-    </span>
-</a>
+            <span class="ml-3 transition-opacity duration-200"
+                :class="sidebarOpen ? 'opacity-100' : 'opacity-0 pointer-events-none w-0'" x-cloak>
+                User
+            </span>
+        </a>
 
         <a href="{{ route('kategori.index') }}"
-        class="flex items-center text-gray-100 hover:bg-gray-700 hover:text-white rounded-lg transition-colors duration-200
+            class="flex items-center text-gray-100 hover:bg-gray-700 hover:text-white rounded-lg transition-colors duration-200
             {{ request()->routeIs('kategori.*') ? 'bg-gray-700' : '' }}"
-        :class="{ 'px-4 py-2': sidebarOpen, 'p-2 justify-center': !sidebarOpen }">
-        <svg class="h-6 w-6 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none"
-            viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-        <span class="ml-3 transition-opacity duration-200"
-            :class="sidebarOpen ? 'opacity-100' : 'opacity-0 pointer-events-none w-0'" x-cloak>
-            Kategori
-        </span>
-    </a>
+            :class="{ 'px-4 py-2': sidebarOpen, 'p-2 justify-center': !sidebarOpen }">
+            <svg class="h-6 w-6 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <span class="ml-3 transition-opacity duration-200"
+                :class="sidebarOpen ? 'opacity-100' : 'opacity-0 pointer-events-none w-0'" x-cloak>
+                Kategori
+            </span>
+        </a>
+        <a href="{{ route('jadwal.index') }}"
+            class="flex items-center text-gray-100 hover:bg-gray-700 hover:text-white rounded-lg transition-colors duration-200
+       {{ request()->routeIs('jadwal.*') ? 'bg-gray-700' : '' }}"
+            :class="{ 'px-4 py-2': sidebarOpen, 'p-2 justify-center': !sidebarOpen }">
+            <svg class="h-6 w-6 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+            <span class="ml-3 transition-opacity duration-200"
+                :class="sidebarOpen ? 'opacity-100' : 'opacity-0 pointer-events-none w-0'" x-cloak>
+                Jadwal
+            </span>
+        </a>
+        <a href="{{ route('absensi.index') }}"
+            class="flex items-center text-gray-100 hover:bg-gray-700 hover:text-white rounded-lg transition-colors duration-200
+       {{ request()->routeIs('absensi.*') ? 'bg-gray-700' : '' }}"
+            :class="{ 'px-4 py-2': sidebarOpen, 'p-2 justify-center': !sidebarOpen }">
+            <svg class="h-6 w-6 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M9 12h6m2 0a2 2 0 012 2v4a2 2 0 01-2 2H7a2 2 0 01-2-2v-4a2 2 0 012-2h2m4-8v4m0 0H9m3 0h3" />
+            </svg>
+            <span class="ml-3 transition-opacity duration-200"
+                :class="sidebarOpen ? 'opacity-100' : 'opacity-0 pointer-events-none w-0'" x-cloak>
+                Absensi
+            </span>
+        </a>
+
     </nav>
 </aside>

@@ -31,7 +31,7 @@ class UserController extends Controller
         $request->validate([
             'nama' => 'required|string|max:100',
             'uuid' => 'required|string|unique:user_absens,uuid',
-            'kategori_id' => 'nullable|exists:kategoris,id',
+            'kategori_id' => 'required|exists:kategoris,id',
         ]);
 
         UserAbsen::create([
@@ -61,7 +61,7 @@ class UserController extends Controller
         $request->validate([
             'nama' => 'required|string|max:100',
             'uuid' => 'required|string|unique:user_absens,uuid,' . $user->id,
-            'kategori_id' => 'nullable|exists:kategoris,id',
+            'kategori_id' => 'required|exists:kategoris,id',
         ]);
 
         $user->update([
