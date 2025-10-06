@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Admin\JadwalController;
+use App\Http\Controllers\Admin\KategoriController;
 use App\Http\Controllers\Admin\DashboardController;
 
 // ==== PUBLIC ==== //
@@ -20,4 +23,6 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 // ==== ADMIN ==== //
 Route::middleware('auth')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    Route::resource('users', UserController::class);
+    Route::resource('kategori', KategoriController::class);
 });

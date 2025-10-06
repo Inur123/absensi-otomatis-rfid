@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\App;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -19,6 +20,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        App::setLocale('id'); // Set bahasa Laravel ke Indonesia
+        setlocale(LC_TIME, 'id_ID.UTF-8'); // Set locale PHP untuk tanggal
     }
 }
